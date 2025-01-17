@@ -102,6 +102,10 @@ jobs:
         [ -e files ] && mv files $OPENWRT_PATH/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE $OPENWRT_PATH/.config
 
+    - name: Modify Default IP(修改默认IP)
+      run: |
+        sed -i 's/192.168.1.1/192.168.10.1/g' $OPENWRT_PATH/package/base-files/files/bin/config_generate
+
     - name: Download DL Package(下载DL软件包)
       run: |
         cd $OPENWRT_PATH

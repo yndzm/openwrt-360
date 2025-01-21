@@ -99,11 +99,6 @@ jobs:
         git clone --depth 1 https://github.com/yndzm/openwrt-X.git package/new/custom
         mv package/new/custom/luci-app-adguardhome  package/new
         mv package/new/custom/adguardhome package/new
-        mv package/new/custom/luci-lib-xterm  package/new
-        mv package/new/custom/luci-lib-taskd  package/new
-        mv package/new/custom/taskd  package/new
-        mv package/new/custom/quickstart package/new
-        mv package/new/custom/luci-app-quickstart  package/new
         rm -rf package/new/custom
         ./scripts/feeds install -a
   
